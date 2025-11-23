@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+     <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <title></title>
+</head>
+<body>
+   <div class="container">
+        <header>
+            <h1>Вивчення англійської мови</h1>
+            <p class="subtitle">Покращуйте свої знання з англійської мови</p>
+        </header>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="current-step">1</div>
+                <div class="stat-label">Поточний крок</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="correct-count">0</div>
+                <div class="stat-label">Вірно</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="incorrect-count">0</div>
+                <div class="stat-label">Невірно</div>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card" id="word-card">
+                <div class="word" id="current-word">apple</div>
+                <p class="hint">Введіть переклад слова в поле нижче</p>
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="translation-input" placeholder="Введіть переклад...">
+                <button id="check-btn">Перевірити</button>
+            </div>
+            <div class="result-message" id="result-message"></div>
+            
+            <div class="button-group">
+                <button class="next-btn" id="next-btn">Далі</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="result-modal">
+        <div class="modal-content">
+            <h2>Результати навчання</h2>
+            <div class="level" id="knowledge-level">Початківець</div>
+            
+            <div class="result-stats">
+                <div class="result-stat correct">
+                    <div class="result-value" id="modal-correct">0</div>
+                    <div>Вірно</div>
+                </div>
+                <div class="result-stat incorrect">
+                    <div class="result-value" id="modal-incorrect">0</div>
+                    <div>Невірно</div>
+                </div>
+            </div>
+            
+            <div class="modal-buttons">
+                <button class="btn-restart" id="restart-btn">Почати знову</button>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
